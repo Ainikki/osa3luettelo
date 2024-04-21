@@ -45,6 +45,7 @@ const customFormat = (tokens, req, res) => {
 
 app.use(express.json())
 app.use(morgan(customFormat))
+app.use(express.static('dist'))
       
 app.get('/', (request, response) => {
     response.send('<h1>Hello World!</h1>')
