@@ -47,9 +47,6 @@ app.use(express.json())
 app.use(morgan(customFormat))
 app.use(express.static('dist'))
       
-app.get('/', (request, response) => {
-    response.send('<h1>Hello World!</h1>')
-  })
 
 app.get('/info', (request, response) => {
     const timestamp = new Date().toString(); // Get current date and time
